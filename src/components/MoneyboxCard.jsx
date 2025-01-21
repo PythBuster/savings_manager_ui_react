@@ -9,8 +9,8 @@ function MoneyboxCard({name, priority, savingsAmountStr, savingsTargetStr, balan
         <Box sx={{
             minWidth: 275,
             border: `1px solid`,
-            borderColor: 'divider', // Nutzt die divider-Farbe aus dem Theme
-            borderRadius: 2,// Leicht abgerundete Ecken
+            borderColor: 'divider',
+            borderRadius: 2,
         }}>
 
             <Card variant="outlined">
