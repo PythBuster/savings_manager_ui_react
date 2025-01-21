@@ -10,11 +10,11 @@ function MoneyboxCard({name, priority, savingsAmountStr, savingsTargetStr, balan
             minWidth: 275,
             border: `1px solid`,
             borderColor: 'divider', // Nutzt die divider-Farbe aus dem Theme
-            borderRadius: 2, // Leicht abgerundete Ecken
+            borderRadius: 2,// Leicht abgerundete Ecken
         }}>
 
             <Card variant="outlined">
-                <CardContent style={{ textAlign: 'center' }}>
+                <CardContent style={{ textAlign: 'center', verticalAlign: 'top' }}>
                     <CardHeader title={name} sx={{
                         paddingBottom: 0,
                         '& .MuiCardHeader-title': {
@@ -22,43 +22,55 @@ function MoneyboxCard({name, priority, savingsAmountStr, savingsTargetStr, balan
                         },
                     }}/>
 
-                    <Typography sx={{ color: 'text.secondary', mb: 2 }}>
-                        {t('priority')}: {priority}
-                    </Typography>
-
-                    <Box sx={{
-                        pl: 7,
-                        pr: 7,
-                        display: 'flex',
-                        justifyContent: 'center',
-                        color: 'success.main', // colorize 'blue'
+                    <Box style={{
+                        textAlign: 'center',
+                        verticalAlign: 'top',
+                        padding: 0,
+                        margin: 0,
                     }}>
-                        <Typography>{t('savings-amount')}:</Typography>&nbsp;
-                        <Typography>{savingsAmountStr}</Typography>
-                    </Box>
 
-                    <Box sx={{
-                        mb: 2,
-                        pl: 7,
-                        pr: 7,
-                        display: 'flex',
-                        justifyContent: 'center',
-                        color: 'info.main', // colorize 'blue'
-                    }}>
-                        <Typography>{t('savings-target')}:</Typography>&nbsp;
-                        <Typography>{savingsTargetStr}</Typography>
-                    </Box>
-
-                    <Box sx={{
-                        pl: 7,
-                        pr: 7,
-                        display: 'flex',
-                        justifyContent: 'center'
-                    }}>
                         <Typography sx={{
-                            fontWeight: 'bold'
-                        }}>{balanceStr}</Typography>
+                            color: 'text.secondary', mb: 2 }}>
+                            {t('priority')}: {priority}
+                        </Typography>
+
+
+                        <Box sx={{
+                            pl: 7,
+                            pr: 7,
+                            display: 'flex',
+                            justifyContent: 'center',
+                            color: 'success.main', // colorize 'blue'
+                        }}>
+                            <Typography>{t('savings-amount')}:</Typography>&nbsp;
+                            <Typography>{savingsAmountStr}</Typography>
+                        </Box>
+
+                        <Box sx={{
+                            mb: 2,
+                            pl: 7,
+                            pr: 7,
+                            display: 'flex',
+                            justifyContent: 'center',
+                            color: 'info.main', // colorize 'blue'
+                        }}>
+                            <Typography>{t('savings-target')}:</Typography>&nbsp;
+                            <Typography>{savingsTargetStr}</Typography>
+                        </Box>
+
+                        <Box sx={{
+                            pl: 7,
+                            pr: 7,
+                            display: 'flex',
+                            justifyContent: 'center',
+                            mt: 2
+                        }}>
+                            <Typography sx={{
+                                fontWeight: 'bold'
+                            }}>{balanceStr}</Typography>
+                        </Box>
                     </Box>
+
                 </CardContent>
             </Card>
 
